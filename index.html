@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10100f">
+<title>CraveRush | Fresh Food & Midnight Delivery</title>
+<style>
+:root{--bg:#10100f;--panel:#191918;--panel2:#20201e;--cream:#f7f1e7;--muted:#aaa49a;--orange:#ff9c42;--orange2:#ffbd70;--line:#34322e;--green:#a8df45;--apple:#a8df45;--apple-soft:#d0f28b;--danger:#ef5350}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:#10100feF;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:-.8px;font-size:20px;display:flex;align-items:center;gap:6px}.brand span{color:var(--orange)}.navlinks{display:flex;gap:22px;color:#d4cec3;font-size:13px;align-items:center}.navlinks a:hover{color:var(--apple)}.nav-cta,.btn{border:0;border-radius:999px;background:var(--orange);color:#17120d;font-weight:800;padding:12px 19px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s all}.nav-cta:hover,.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}.nav-cta{font-size:13px;padding:10px 16px}.hero{padding:48px 0 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{color:var(--apple-soft);text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.hero h1{font-size:clamp(42px,6.4vw,70px);line-height:.99;letter-spacing:-3px;margin:14px 0 18px;max-width:650px}.hero h1 em{font-style:normal;color:var(--orange)}.hero p{color:var(--muted);max-width:490px;margin:0 0 23px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn.secondary{background:transparent;color:var(--cream);border:1px solid #514a40}.btn.secondary:hover{border-color:var(--orange);color:var(--orange2)}.hero-note{font-size:12px;color:#8f8a81;margin-top:17px}.hero-art{min-height:330px;border-radius:26px;overflow:hidden;position:relative;background:radial-gradient(circle at 65% 30%,#663a1e 0,#2a1c13 32%,#191715 70%);display:flex;align-items:center;justify-content:center;border:1px solid #ffffff12}.hero-art:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#a8df4525;filter:blur(24px)}.plate{width:245px;height:245px;border-radius:50%;background:radial-gradient(circle,#e8d5b6 0 55%,#b8a58b 56% 60%,#f0e7d8 61% 69%,#66513c 70% 73%,#171513 74%);box-shadow:0 25px 65px #0009;display:grid;place-items:center;transform:rotate(-12deg);position:relative}.plate .food{font-size:104px;filter:drop-shadow(0 8px 7px #6b351e99)}.art-label{position:absolute;bottom:20px;left:22px;background:#10100fd9;border:1px solid #ffffff20;border-radius:14px;padding:10px 14px;font-size:12px;color:#e9dfd0}.art-label b{color:var(--orange)}section{padding:34px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:20px}.section-head h2{font-size:clamp(23px,2.5vw,29px);line-height:1.2;letter-spacing:-1px;margin:5px 0 0}.section-head p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.food-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:10px}.food-chip{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 8px;text-align:center;color:#e8dfd2;font-size:12px;transition:.2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}.food-chip:hover{border-color:var(--orange)}.food-chip .chip-img{width:36px;height:36px;object-fit:cover;border-radius:8px}.food-chip span{display:block;font-size:28px}.compare{background:linear-gradient(135deg,#1b1a18,#151514);border:1px solid var(--line);border-radius:22px;padding:23px}.compare h2{margin:0 0 5px;font-size:26px}.compare>p{margin:0 0 18px;color:var(--muted);font-size:13px}.compare-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:0}.compare-grid>div{padding:13px 12px;border-bottom:1px solid var(--line);font-size:13px;overflow-wrap:anywhere}.compare-grid .head{color:var(--orange2);font-weight:800}.yes{color:var(--apple)}.no{color:#e49a87}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.info-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;min-width:0}.info-card h3{margin:0 0 12px;font-size:19px}.info-card p,.info-card li{color:var(--muted);font-size:13px;line-height:1.6}.info-card ul{padding-left:18px;margin:0}.location-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.location-pill{padding:9px 14px;border-radius:999px;background:#252d18;border:1px solid #607b32;color:var(--apple-soft);font-weight:800;font-size:12px}.order-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}.menu-card,.cart-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px;min-width:0}.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.menu-item{background:var(--panel2);border:1px solid #34322e;border-radius:15px;padding:13px;display:flex;align-items:center;gap:11px;min-width:0;transition:.2s}.menu-item:hover{border-color:#534d44}.dish-media{width:46px;height:46px;border-radius:12px;background:#34271d;display:grid;place-items:center;font-size:23px;flex:none;overflow:hidden}.dish-media img{width:100%;height:100%;object-fit:cover}.dish-info{min-width:0;flex:1}.dish-info b{display:block;font-size:13px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dish-info small{color:var(--muted);font-size:11px}.dish-info .dish-desc{font-size:10px;color:#8f8a81;margin-top:2px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.price{color:var(--orange2);font-size:12px;font-weight:800}.add{border:1px solid #78502d;color:var(--orange2);background:#2d2117;border-radius:10px;padding:7px 11px;font-weight:800;font-size:12px;white-space:nowrap;transition:.15s}.add:hover:not(:disabled){background:var(--orange);color:#10100f}.cart-card h3,.menu-card h3{margin:0 0 14px}.cart-empty{color:var(--muted);font-size:13px;padding:18px 0;text-align:center}.cart-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:10px 0;font-size:13px}.cart-row b{font-size:13px}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:#2a2926;color:white;border-radius:7px;width:24px;height:24px;font-weight:bold;display:grid;place-items:center;transition:.15s}.qty button:hover{border-color:var(--orange);color:var(--orange)}.bill-breakdown{margin:16px 0 12px;border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:6px;font-size:12px}.bill-row{display:flex;justify-content:space-between;color:var(--muted)}.bill-row.grand{color:var(--cream);font-size:15px;font-weight:900;margin-top:4px;border-top:1px solid var(--line);padding-top:8px}.free-badge{background:#233516;color:var(--apple-soft);padding:2px 6px;border-radius:6px;font-size:10px;font-weight:800}.form-grid{display:grid;gap:10px;margin-top:15px}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px;font-weight:600}.field input,.field select,.field textarea{width:100%;border-radius:11px;background:#111110;border:1px solid #3b3934;color:var(--cream);padding:11px 12px;outline:none;transition:.15s}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange)}.full{width:100%}.fine{font-size:11px;color:#918a80;margin-top:10px;line-height:1.5}.notice{border:1px solid #5b482e;background:#2a2117;color:#e9c99f;padding:12px;border-radius:12px;font-size:12px;margin:12px 0;line-height:1.5}.rating{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}.stars{display:flex;gap:8px;margin:10px 0}.stars button{border:0;background:none;color:#625c52;font-size:28px;padding:0;transition:.15s}.stars button.active{color:var(--orange)}footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#8f897f;font-size:12px}.refund-policy{width:100%;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);color:#c6c0b5;font-size:12px}.refund-policy b{color:var(--apple-soft)}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--cream);color:#17120d;padding:12px 20px;border-radius:12px;font-size:13px;font-weight:800;transition:.25s;z-index:99;box-shadow:0 12px 35px #000c}.toast.show{opacity:1;transform:translate(-50%,0)}
+.stock-panel{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:15px;background:#171a14}.stock-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.stock-head b{font-size:13px}.stock-legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.stock-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--apple)}.stock-dot.out{background:#ef5350}.stock-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stock-line{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;border-radius:10px;background:#20231c;font-size:11px}.stock-state{font-weight:800;color:var(--apple-soft);white-space:nowrap}.stock-state.out{color:#ef9384}.menu-item.sold-out{opacity:.6}.menu-item.sold-out .add{border-color:#55413d;color:#ef9384;background:#2a1d1a;cursor:not-allowed}.menu-item .stock-tag{font-size:10px;color:var(--apple-soft);display:block;margin-top:2px}.menu-item .stock-tag.out{color:#ef9384}
+.store-closed-banner{background:#381414;border:1px solid #7d2626;color:#ffb4b4;padding:16px 20px;border-radius:16px;margin-bottom:20px;display:flex;align-items:center;gap:14px;font-size:13px}.store-closed-banner b{font-size:14px;color:#ff8e8e;display:block}
+.tracker-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:24px}.tracker-input-row{display:flex;gap:10px;margin-top:12px}.tracker-input-row input{flex:1;border-radius:11px;background:#111110;border:1px solid #3b3934;color:var(--cream);padding:11px 12px;outline:none}.timeline{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:12px}.timeline-step{display:flex;align-items:center;gap:12px;font-size:13px}.step-dot{width:28px;height:28px;border-radius:50%;background:#2a2926;border:2px solid #4a4740;display:grid;place-items:center;font-size:12px;flex:none;color:#888}.timeline-step.active .step-dot{background:var(--orange);border-color:var(--orange2);color:#10100f;font-weight:900}.timeline-step.done .step-dot{background:var(--apple);border-color:var(--apple-soft);color:#10100f;font-weight:900}.step-info b{display:block;font-size:13px}.step-info small{color:var(--muted);font-size:11px}
+.modal-overlay{position:fixed;inset:0;background:#000000b0;backdrop-filter:blur(8px);display:none;place-items:center;z-index:90;padding:16px;overflow-y:auto}.modal-overlay.open{display:grid}.modal-box{background:var(--panel);border:1px solid #4d463d;border-radius:24px;width:min(520px,100%);padding:26px;position:relative;box-shadow:0 25px 60px #000e;max-height:90vh;overflow-y:auto}.modal-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer}.modal-close:hover{color:var(--cream)}.modal-box h3{margin:0 0 6px;font-size:22px;letter-spacing:-.5px}.qr-container{display:flex;flex-direction:column;align-items:center;margin:18px 0;padding:18px;background:#141413;border:1px solid var(--line);border-radius:18px}.qr-image{width:220px;height:220px;object-fit:contain;border-radius:14px;background:#fff;padding:8px}.upi-copy-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;background:#201f1c;padding:8px 14px;border-radius:10px;font-size:12px;border:1px solid #3d3a33}.upi-copy-row button{background:none;border:none;color:var(--orange2);font-weight:bold;cursor:pointer;padding:2px 6px}.upi-direct-btn{background:#233516;border:1px solid #607b32;color:var(--apple-soft);font-weight:800;border-radius:10px;padding:10px 16px;display:inline-flex;align-items:center;gap:8px;font-size:12px;margin-top:10px;text-decoration:none}.upload-zone{border:2px dashed #4d473d;border-radius:16px;padding:16px;text-align:center;cursor:pointer;background:#141413;transition:.2s;margin-top:14px}.upload-zone:hover{border-color:var(--orange);background:#1a1917}.preview-box{margin-top:12px;display:none;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#10100f}.preview-box img{width:100%;max-height:180px;object-fit:contain;display:block}.remove-preview{position:absolute;top:8px;right:8px;background:#ef5350;color:#fff;border:none;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:bold}
+body{position:relative;isolation:isolate;overflow-x:hidden}body:before,body:after{content:"";position:fixed;z-index:-1;pointer-events:none;width:440px;height:440px;border-radius:50%;filter:blur(85px);opacity:.15;will-change:transform}body:before{top:8%;left:-240px;background:radial-gradient(circle,#a8df45 0%,#ff9c42 38%,transparent 70%);animation:driftOne 19s ease-in-out infinite alternate}body:after{right:-250px;top:48%;background:radial-gradient(circle,#ff9c42 0%,#8dbb35 42%,transparent 70%);animation:driftTwo 23s ease-in-out infinite alternate}@keyframes driftOne{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(110px,145px,0)}100%{transform:translate3d(45px,300px,0)}}@keyframes driftTwo{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(-125px,-115px,0)}100%{transform:translate3d(-35px,-290px,0)}}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}section{padding:28px 0}.navlinks{display:none}.hero{grid-template-columns:1fr;gap:22px;padding:34px 0 24px}.hero h1{letter-spacing:-2px}.hero-art{min-height:240px}.plate{width:185px;height:185px}.plate .food{font-size:75px}.food-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid,.order-layout{grid-template-columns:minmax(0,1fr)}.compare{padding:17px}.compare-grid{grid-template-columns:1.05fr 1fr 1fr}.compare-grid>div{font-size:11px;padding:10px 7px}.menu-list{grid-template-columns:minmax(0,1fr)}.stock-list{grid-template-columns:1fr}.menu-card,.cart-card{padding:18px}.modal-box{padding:20px}}
+@media(min-width:761px) and (max-width:980px){.food-strip{grid-template-columns:repeat(4,minmax(0,1fr))}.order-layout{grid-template-columns:minmax(0,1fr)}}
+
+/* Top Announcement Offer Bar */
+.top-offer-bar{background:linear-gradient(90deg,#1c2b12 0%,#2d1e11 50%,#182910 100%);border-bottom:1px solid #4a6825;color:#f7f1e7;padding:9px 16px;font-size:12px;display:none;position:relative;z-index:30}
+.offer-inner{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;flex-wrap:wrap}
+.offer-badge{background:var(--apple);color:#10140c;font-weight:900;font-size:10px;padding:3px 9px;border-radius:999px;letter-spacing:1px;text-transform:uppercase}
+.offer-text{color:#e8f4d9;font-weight:700}
+.brand-green-dot{display:inline-block;width:7px;height:7px;background:var(--apple);border-radius:50%;box-shadow:0 0 10px var(--apple);margin-left:3px}
+
+/* Enhanced Big Food Item Card */
+.menu-item{background:var(--panel2);border:1px solid #36332c;border-radius:18px;padding:14px;display:flex;align-items:center;gap:14px;min-width:0;transition:.25s;position:relative}
+.menu-item:hover{border-color:#635745;transform:translateY(-1px);box-shadow:0 8px 24px #00000070}
+.dish-media{width:96px !important;height:96px !important;border-radius:16px !important;background:radial-gradient(circle,#3a2d1f 0%,#201c18 100%) !important;display:grid;place-items:center;font-size:42px !important;flex:none;overflow:hidden;border:1px solid #4a3e2e;box-shadow:0 6px 16px #00000060}
+.dish-media img{width:100% !important;height:100% !important;object-fit:cover !important;transition:transform .3s ease}
+.menu-item:hover .dish-media img{transform:scale(1.08)}
+.food-chip .chip-img{width:56px !important;height:56px !important;object-fit:cover;border-radius:12px !important}
+.food-chip{padding:14px 10px;border-radius:18px}
+.food-chip:hover{border-color:var(--apple);transform:translateY(-2px)}
+
+/* Free Delivery Label & Progress Banner */
+.free-delivery-card{background:linear-gradient(135deg,#182510 0%,#251b11 100%);border:1px solid #5a7d2d;border-radius:15px;padding:14px;margin:12px 0 16px;box-shadow:0 6px 20px #a8df4518}
+.fd-content{display:flex;align-items:center;gap:12px}
+.fd-icon{font-size:26px}
+.fd-text-wrap{flex:1}
+.fd-text-wrap b{font-size:12px;color:var(--apple-soft);display:block;line-height:1.3}
+.fd-text-wrap span{font-size:11px;color:#c9c2b5;display:block;margin-top:2px}
+.fd-bar-wrap{height:6px;background:#151812;border-radius:999px;margin-top:10px;overflow:hidden;border:1px solid #364821}
+.fd-bar-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--apple));border-radius:999px;transition:width .3s ease}
+
+/* Payment Order Summary Breakdown Box */
+.payment-summary-box{background:#151514;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:14px 0}
+.ps-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:13px;border-bottom:1px solid #282622;padding-bottom:8px}
+.ps-items-list{max-height:110px;overflow-y:auto;display:grid;gap:6px;font-size:12px;margin-bottom:10px}
+.ps-item-row{display:flex;justify-content:space-between;color:#c9c3b8}
+.ps-calc{border-top:1px dashed var(--line);padding-top:8px;display:grid;gap:5px;font-size:12px}
+.ps-row{display:flex;justify-content:space-between;color:var(--muted)}
+.ps-row.ps-grand{color:var(--cream);font-size:15px;font-weight:900;border-top:1px solid var(--line);padding-top:6px;margin-top:3px}
+
+/* Hero Video Box */
+.hero-video-box{width:100%;height:100%;min-height:340px;display:none;position:relative}
+.hero-video-box video{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:26px;display:block}
+
+</style>
+</head>
+<body>
+<!-- Top Announcement / Offer Bar -->
+<div id="topOfferBar" class="top-offer-bar">
+  <div class="wrap offer-inner">
+    <span class="offer-badge" id="offerBadge">TODAY'S DEAL</span>
+    <span class="offer-text" id="offerText">🔥 SPECIAL MIDNIGHT DEAL: Get FREE Delivery on all orders above ₹149! | Cooked fresh & served hot 🌙</span>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#">CRAVE<span>RUSH</span><span class="brand-green-dot"></span></a>
+    <nav class="navlinks">
+      <a href="#food">Our food</a>
+      <a href="#why-us">Why us</a>
+      <a href="#timings">Timings</a>
+      <a href="#order">Order</a>
+      <a href="#track">Track order</a>
+      <a href="admin.html" target="_blank" style="color:var(--orange2);font-weight:700">Admin 🔒</a>
+    </nav>
+    <a class="nav-cta" href="#order">Order now ↗</a>
+  </div>
+</header>
+<main>
+  <!-- Hero Section -->
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Freshly prepared • Made for students</div>
+      <h1 id="heroHeadline">Midnight<br><em>Cravings?</em></h1>
+      <p id="heroSubheadline">Freshly prepared food 🌙<br>Good quality, large quantity and student-friendly prices, made with care.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#order">Order now <span>↗</span></a>
+        <a class="btn secondary" href="#food">See the food</a>
+        <a class="btn secondary" href="#track">Track order 🔍</a>
+      </div>
+      <div class="hero-note" id="heroNote">Good food. Large quantity. Prices that make sense for students.</div>
+    </div>
+    <div class="hero-art" id="heroArtWrapper">
+      <!-- 15s Hero Video Container -->
+      <div class="hero-video-box" id="heroVideoContainer">
+        <video id="heroVideoPlayer" autoplay muted loop playsinline controls></video>
+      </div>
+      <div class="plate"><div class="food" id="heroEmoji">🍜</div></div>
+      <div class="art-label">Fresh from our kitchen <b>· Made to order</b></div>
+    </div>
+  </div>
+
+  <!-- Food Chips Showcase -->
+  <section id="food">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Quality you can taste</div>
+          <h2>Good food. Large quantity.</h2>
+        </div>
+        <p>Quality ingredients, satisfying quantity and great value in every order.</p>
+      </div>
+      <div class="food-strip" id="foodStrip">
+        <!-- Dynamically rendered from live menu -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison / Value Proposition -->
+  <section id="why-us">
+    <div class="wrap compare">
+      <h2>More value for students</h2>
+      <p>Good quality, large quantity and reasonable prices.</p>
+      <div class="compare-grid">
+        <div class="head">What you get</div>
+        <div class="head">CraveRush</div>
+        <div class="head">The benefit</div>
+        <div>Food quality</div>
+        <div class="yes">✓ Freshly prepared</div>
+        <div>Food made with care</div>
+        <div>Quantity</div>
+        <div class="yes">✓ Large quantity</div>
+        <div>Filling meals</div>
+        <div>Pricing</div>
+        <div class="yes">✓ Student-friendly</div>
+        <div>Reasonable rates</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timings & Service Locations -->
+  <section id="timings">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Where & when</div>
+          <h2>Serving your neighbourhood</h2>
+        </div>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📍 Service locations</h3>
+          <p>For everyone: students, hostel residents, families and the general public across our service areas.</p>
+          <div class="location-pills" id="locationPills">
+            <span class="location-pill">📍 Jhalawar</span>
+            <span class="location-pill">📍 Patan</span>
+            <span class="location-pill">🏠 Hostels & colleges</span>
+            <span class="location-pill">＋ Nearby areas</span>
+          </div>
+          <p class="fine">Choose your area while placing your order. We welcome orders from the general public too. Delivery is confirmed based on your exact address and daily availability.</p>
+        </div>
+        <div class="info-card">
+          <h3>⏰ Order timings</h3>
+          <ul id="timingsList">
+            <li>Order window: 12:00 PM – 10:00 PM</li>
+            <li>Orders are subject to daily availability</li>
+            <li>Please confirm availability before placing an order</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ordering Section -->
+  <section id="order">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Your order starts here</div>
+          <h2>Place your order</h2>
+        </div>
+        <p>Choose your food and quantity.</p>
+      </div>
+
+      <!-- Store Paused Notice Banner if Kitchen Closed -->
+      <div id="storePausedBanner" class="store-closed-banner" style="display:none;">
+        <span style="font-size:26px">🌙</span>
+        <div>
+          <b>Ordering is currently paused</b>
+          <span>Our kitchen is closed right now. Please check back during our regular delivery hours or message us on WhatsApp!</span>
+        </div>
+      </div>
+
+      <div class="order-layout">
+        <!-- Menu Side -->
+        <div class="menu-card">
+          <h3>🍽️ Today’s Menu</h3>
+          <div class="notice" id="dailyNotice">
+            Availability updates in real-time. Freshly prepared to order.
+          </div>
+          <div class="stock-panel">
+            <div class="stock-head">
+              <b>Live kitchen availability</b>
+              <span class="stock-legend">
+                <span><i class="stock-dot"></i>Available</span>
+                <span><i class="stock-dot out"></i>Sold out</span>
+              </span>
+            </div>
+            <div class="stock-list" id="stockList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+          <div class="menu-list" id="menu">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Cart Side -->
+        <aside class="cart-card">
+          <h3>Your cart</h3>
+          <div id="cart">
+            <div class="cart-empty">Your cart is empty. A tragedy, but easily fixed.</div>
+          </div>
+
+          <!-- Free Delivery Threshold Banner (149 rs prompt) -->
+          <div class="free-delivery-card" id="freeDeliveryBadge">
+            <div class="fd-content">
+              <span class="fd-icon">🚚</span>
+              <div class="fd-text-wrap">
+                <b id="fdHeadline">Get food up to ₹149 and get FREE DELIVERY!</b>
+                <span id="fdProgressText">Add food items to unlock 100% free delivery</span>
+              </div>
+            </div>
+            <div class="fd-bar-wrap">
+              <div class="fd-bar-fill" id="fdBarFill" style="width:0%"></div>
+            </div>
+          </div>
+
+          <!-- Bill Summary -->
+          <div class="bill-breakdown" id="billBreakdown" style="display:none;">
+            <div class="bill-row">
+              <span>Food Subtotal</span>
+              <span id="subtotalVal">₹0</span>
+            </div>
+            <div class="bill-row">
+              <span>Delivery Fee <span id="freeThresholdHint" style="font-size:10px;color:var(--orange2)"></span></span>
+              <span id="deliveryFeeVal">₹0</span>
+            </div>
+            <div class="bill-row grand">
+              <span>Final Total</span>
+              <span id="grandTotalVal" style="color:var(--orange2)">₹0</span>
+            </div>
+          </div>
+
+          <!-- Checkout Details Form -->
+          <div class="form-grid">
+            <div class="field">
+              <label for="customer">Your full name *</label>
+              <input id="customer" placeholder="e.g. Rahul Sharma" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="phone">Mobile phone number *</label>
+              <input id="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" maxlength="10">
+            </div>
+            <div class="field">
+              <label for="room">Complete delivery address *</label>
+              <input id="room" placeholder="Hostel name, room no., flat, street, landmark">
+            </div>
+            <div class="field">
+              <label for="location">Delivery area *</label>
+              <select id="location">
+                <option value="">Select your area</option>
+                <option value="Jhalawar">Jhalawar</option>
+                <option value="Patan">Patan</option>
+                <option value="Hostel / college area">Hostel / college area</option>
+                <option value="Other nearby area (confirm first)">Other nearby area (confirm first)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="instructions">Special instructions / customization (optional)</label>
+              <textarea id="instructions" rows="2" placeholder="e.g. Less spicy, extra sauce, call when downstairs..."></textarea>
+            </div>
+            <button class="btn full" id="placeOrderBtn" onclick="openPaymentModal()">
+              Proceed to Payment <span>↗</span>
+            </button>
+          </div>
+          <div class="fine">
+            Once submitted, your order status is set to <b>Payment Verification Pending</b>. The kitchen verifies your payment screenshot against the bank transaction before preparing your food.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Order Tracker Section -->
+  <section id="track">
+    <div class="wrap">
+      <div class="tracker-card">
+        <div class="eyebrow">Real-time status</div>
+        <h2 style="font-size:24px;margin:6px 0 4px">Track Your Order 🛵</h2>
+        <p style="color:var(--muted);font-size:13px;margin:0 0 14px">
+          Enter your unique Order ID or 10-digit mobile number to view live preparation and delivery status.
+        </p>
+        <div class="tracker-input-row">
+          <input id="trackQuery" placeholder="Enter Order ID (e.g. CR-89421) or phone number">
+          <button class="btn" onclick="trackOrder()">Track</button>
+        </div>
+        <div id="trackerResult" style="display:none;margin-top:20px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Rating -->
+  <section>
+    <div class="wrap">
+      <div class="rating">
+        <div class="eyebrow">Your feedback matters</div>
+        <h2 style="margin:5px 0">Rate your experience ⭐</h2>
+        <p style="color:var(--muted);font-size:13px;margin:0">How was your CraveRush order? Tap the stars.</p>
+        <div class="stars" id="stars">
+          <button onclick="rate(1)">★</button>
+          <button onclick="rate(2)">★</button>
+          <button onclick="rate(3)">★</button>
+          <button onclick="rate(4)">★</button>
+          <button onclick="rate(5)">★</button>
+        </div>
+        <div class="field">
+          <label for="feedback">Comment (optional)</label>
+          <textarea id="feedback" rows="2" placeholder="Tell us what you liked or what we can improve"></textarea>
+        </div>
+        <button class="btn" style="margin-top:12px" onclick="submitRating()">Submit rating</button>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Payment & Proof Upload Modal -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closePaymentModal()">&times;</button>
+    <div class="eyebrow">UPI Payment Verification</div>
+    <h3>Scan & Pay with UPI</h3>
+    <p style="color:var(--muted);font-size:12px;margin:4px 0 12px">
+      Order ID: <b id="modalOrderId" style="color:var(--cream)">CR-00000</b>
+    </p>
+
+    <!-- Detailed Order Summary Breakdown (e.g. 100 rs for food, 30rs for delivery) -->
+    <div class="payment-summary-box">
+      <div class="ps-head">
+        <b>📋 Order Breakdown</b>
+        <span id="modalSummaryCount">0 items</span>
+      </div>
+      <div id="modalSummaryItems" class="ps-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="ps-calc">
+        <div class="ps-row">
+          <span>Food Subtotal:</span>
+          <b id="modalFoodAmount" style="color:var(--cream)">₹0</b>
+        </div>
+        <div class="ps-row">
+          <span>Delivery Charges:</span>
+          <b id="modalDeliveryAmount" style="color:var(--apple-soft)">₹30</b>
+        </div>
+        <div class="ps-row ps-grand">
+          <span>Total Payable Amount:</span>
+          <b id="modalGrandTotalAmount" style="color:var(--orange)">₹0</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payable Amount Box -->
+    <div style="background:#241d14;border:1px solid #6b431e;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:13px;color:#d8c6b2">Exact Payable Amount:</span>
+      <span id="modalPayableAmount" style="font-size:24px;font-weight:900;color:var(--orange)">₹0</span>
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="qr-container">
+      <img id="upiQrImage" class="qr-image" src="assets/qr-placeholder.svg" alt="CraveRush UPI QR Code">
+      
+      <div class="upi-copy-row">
+        <span>UPI ID: <b id="displayUpiId" style="color:#fff">craverush@upi</b></span>
+        <button onclick="copyUpiId()" id="copyUpiBtn">📋 Copy</button>
+      </div>
+
+      <a id="upiIntentBtn" class="upi-direct-btn" href="#" target="_blank">
+        ⚡ Pay via UPI App (GPay/PhonePe/Paytm)
+      </a>
+      <small style="color:#8f8a81;font-size:11px;margin-top:6px">Works on mobile phones with any UPI app</small>
+    </div>
+
+    <!-- Payment Screenshot Upload -->
+    <div class="field">
+      <label style="color:var(--cream);font-weight:700">Upload Payment Proof (Screenshot) *</label>
+      <div class="upload-zone" onclick="document.getElementById('proofFileInput').click()">
+        <input type="file" id="proofFileInput" accept="image/*" style="display:none" onchange="handleProofSelect(event)">
+        <div id="uploadPrompt">
+          <div style="font-size:28px;margin-bottom:6px">📸</div>
+          <b style="color:var(--orange2);font-size:13px">Tap to upload payment screenshot</b>
+          <p style="color:var(--muted);font-size:11px;margin:4px 0 0">PNG, JPG or WebP from your bank or UPI app</p>
+        </div>
+      </div>
+      <div class="preview-box" id="proofPreviewBox">
+        <img id="proofPreviewImg" src="" alt="Payment Proof">
+        <button class="remove-preview" onclick="removeProof()">✕ Remove</button>
+      </div>
+    </div>
+
+    <button class="btn full" id="submitOrderBtn" style="margin-top:16px" onclick="submitFinalOrder()">
+      Confirm & Submit Order 🚀
+    </button>
+    <div class="fine" style="text-align:center">
+      🛡️ Payment verification is completed manually against our bank records before food preparation begins.
+    </div>
+  </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box" style="text-align:center">
+    <div style="font-size:48px;margin-bottom:8px">🎉</div>
+    <div class="eyebrow" style="color:var(--apple-soft)">Order Submitted Successfully</div>
+    <h3 style="margin-top:4px">We have received your order!</h3>
+    <p style="color:var(--muted);font-size:13px;line-height:1.6;margin:12px 0 18px" id="successSummary">
+      Your order ID is <b>CR-00000</b>. It is currently in <b>Payment Verification Pending</b>.
+    </p>
+
+    <div style="background:#171a14;border:1px solid #4a6328;border-radius:14px;padding:14px;margin-bottom:18px;text-align:left;font-size:12px">
+      <b style="color:var(--apple-soft);display:block;margin-bottom:6px">📲 Automatic WhatsApp Notification:</b>
+      <p style="color:#cac4b8;margin:0">
+        To expedite kitchen verification and delivery dispatch, send your order summary to CraveRush WhatsApp in 1 tap:
+      </p>
+      <a id="whatsappShareBtn" class="btn full" style="margin-top:10px;background:#25d366;color:#fff" href="#" target="_blank">
+        💬 Send to CraveRush WhatsApp
+      </a>
+    </div>
+
+    <button class="btn secondary full" onclick="closeSuccessModal()">
+      Done & Track My Order
+    </button>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>
+      <b class="brand">CRAVE<span style="color:var(--orange)">RUSH</span></b>
+      <div>Midnight Cravings · Fresh food</div>
+    </div>
+    <div id="footerCoverage">Jhalawar · Patan · Hostels · Colleges · General public · Orders: 12 PM–10 PM</div>
+    <div>© <span id="year"></span> CraveRush</div>
+    <div class="refund-policy">
+      <b>Order policy:</b> Once an order has been placed and confirmed, it cannot be refunded.
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Default Data Definitions
+const DEFAULT_SETTINGS = {
+  store_open: true,
+  store_notice: "Availability updates in real-time. Midnight orders are prepared fresh to order!",
+  hero_headline: "Midnight<br><em>Cravings?</em>",
+  hero_subheadline: "Freshly prepared food 🌙<br>Good quality, large quantity and student-friendly prices, made with care.",
+  upi_id: "craverush@upi",
+  upi_name: "CraveRush Food & Delivery",
+  upi_qr_image: "",
+  delivery_fee: 30,
+  free_delivery_threshold: 149,
+  owner_whatsapp: "919876543210",
+  timings_text: "Order window: 12:00 PM – 10:00 PM\nOrders are subject to daily availability\nPlease confirm availability before placing an order",
+  locations: ["Jhalawar", "Patan", "Hostel / college area", "Other nearby area (confirm first)"],
+  admin_pin: "craverush2026",
+  google_sheets_webhook_url: "",
+  offer_active: true,
+  offer_text: "🔥 SPECIAL MIDNIGHT DEAL: Get FREE Delivery on all orders above ₹149! | Cooked fresh & served hot 🌙",
+  offer_badge: "TODAY'S DEAL",
+  hero_video_url: "",
+  hero_video_active: false
+};
+
+const DEFAULT_MENU = [
+  {id:1, name:"Chicken curry", category:"Main Course", price:90, emoji:"🍛", image:"", stock:8, sold_out:false, description:"Rich, aromatic and freshly prepared homestyle curry"},
+  {id:2, name:"Masala soda", category:"Beverages", price:25, emoji:"🥤", image:"", stock:12, sold_out:false, description:"Chilled, tangy and refreshing student favorite"},
+  {id:3, name:"Potato curry", category:"Main Course", price:50, emoji:"🥔", image:"", stock:10, sold_out:false, description:"Comforting spiced homestyle aloo gravy"},
+  {id:4, name:"Hakka noodles", category:"Chinese", price:70, emoji:"🍜", image:"", stock:8, sold_out:false, description:"Wok-tossed noodles with crunchy fresh veggies"},
+  {id:5, name:"Spicy chicken", price:100, category:"Starters", emoji:"🍗", image:"", stock:3, sold_out:false, description:"Crisp and fiery chicken tossed in spicy masala"},
+  {id:6, name:"Simmering curry", category:"Main Course", price:85, emoji:"🍲", image:"", stock:6, sold_out:false, description:"Slow-cooked special gravy packed with flavor"},
+  {id:7, name:"Fried rice", category:"Chinese", price:65, emoji:"🍚", image:"", stock:8, sold_out:false, description:"Fragrant rice stir-fried with fresh vegetables"},
+  {id:8, name:"Achari chicken", category:"Special", price:120, emoji:"🍗", image:"", stock:5, sold_out:false, description:"Tangy pickling spices with succulent chicken cuts"}
+];
+
+let appState = {
+  settings: Object.assign({}, DEFAULT_SETTINGS),
+  menu: [...DEFAULT_MENU],
+  cart: {},
+  uploadedProofBase64: "",
+  activeOrderId: null
+};
+
+const rupees = n => "₹" + Number(n || 0).toLocaleString("en-IN");
+
+// Initialization: Immediate Local Load + Async Server Sync
+async function initAppData() {
+  // 1. Load cached or default data immediately
+  try {
+    const cachedMenu = localStorage.getItem("craverush_menu");
+    const cachedSettings = localStorage.getItem("craverush_settings");
+    if (cachedMenu) {
+      const parsed = JSON.parse(cachedMenu);
+      if (Array.isArray(parsed) && parsed.length) appState.menu = parsed;
+    } else {
+      localStorage.setItem("craverush_menu", JSON.stringify(appState.menu));
+    }
+    if (cachedSettings) {
+      appState.settings = Object.assign({}, DEFAULT_SETTINGS, JSON.parse(cachedSettings));
+    } else {
+      localStorage.setItem("craverush_settings", JSON.stringify(appState.settings));
+    }
+  } catch (err) {
+    console.warn("Local storage parse error:", err);
+  }
+
+  // Render immediately so user sees food instantly!
+  applySettingsToUI();
+  renderMenu();
+  renderCart();
+  renderFoodStrip();
+
+  // 2. Fetch live data if running on server
+  if (window.location.protocol.startsWith("http")) {
+    try {
+      const [menuRes, settingsRes] = await Promise.all([
+        fetch("/api/menu").then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch("/api/settings").then(r => r.ok ? r.json() : null).catch(() => null)
+      ]);
+      if (menuRes && menuRes.success && Array.isArray(menuRes.menu) && menuRes.menu.length) {
+        appState.menu = menuRes.menu;
+        localStorage.setItem("craverush_menu", JSON.stringify(menuRes.menu));
+      }
+      if (settingsRes && settingsRes.success && settingsRes.settings) {
+        appState.settings = Object.assign({}, DEFAULT_SETTINGS, settingsRes.settings);
+        localStorage.setItem("craverush_settings", JSON.stringify(appState.settings));
+      }
+      applySettingsToUI();
+      renderMenu();
+      renderCart();
+      renderFoodStrip();
+    } catch (e) {
+      console.log("Server sync offline:", e);
+    }
+  }
+}
+
+// Real-time synchronization across browser tabs (e.g. admin changed menu/settings)
+window.addEventListener("storage", (e) => {
+  if (e.key === "craverush_menu" && e.newValue) {
+    try {
+      appState.menu = JSON.parse(e.newValue);
+      renderMenu();
+      renderCart();
+      renderFoodStrip();
+    } catch (_) {}
+  }
+  if (e.key === "craverush_settings" && e.newValue) {
+    try {
+      appState.settings = Object.assign({}, DEFAULT_SETTINGS, JSON.parse(e.newValue));
+      applySettingsToUI();
+      renderCart();
+    } catch (_) {}
+  }
+});
+
+function applySettingsToUI() {
+  const s = appState.settings;
+  if (s.hero_headline) document.getElementById("heroHeadline").innerHTML = s.hero_headline;
+  if (s.hero_subheadline) document.getElementById("heroSubheadline").innerHTML = s.hero_subheadline;
+  if (s.store_notice) document.getElementById("dailyNotice").textContent = s.store_notice;
+
+  // Top Offer Banner (Item 3 requested)
+  const offerBar = document.getElementById("topOfferBar");
+  if (offerBar) {
+    if (s.offer_active && s.offer_text) {
+      offerBar.style.display = "block";
+      const b = document.getElementById("offerBadge");
+      const t = document.getElementById("offerText");
+      if (b) b.textContent = s.offer_badge || "TODAY'S DEAL";
+      if (t) t.textContent = s.offer_text;
+    } else {
+      offerBar.style.display = "none";
+    }
+  }
+
+  // Hero Video vs Plate (Item 7 requested)
+  const videoBox = document.getElementById("heroVideoContainer");
+  const plateArt = document.querySelector(".plate");
+  const videoPlayer = document.getElementById("heroVideoPlayer");
+  if (videoBox && plateArt) {
+    if (s.hero_video_active && s.hero_video_url) {
+      videoBox.style.display = "block";
+      plateArt.style.display = "none";
+      if (videoPlayer && videoPlayer.src !== s.hero_video_url) {
+        videoPlayer.src = s.hero_video_url;
+        videoPlayer.play().catch(() => {});
+      }
+    } else {
+      videoBox.style.display = "none";
+      plateArt.style.display = "grid";
+    }
+  }
+  
+  // Store Paused / Open
+  const pausedBanner = document.getElementById("storePausedBanner");
+  const placeBtn = document.getElementById("placeOrderBtn");
+  if (!s.store_open) {
+    pausedBanner.style.display = "flex";
+    placeBtn.disabled = true;
+    placeBtn.innerHTML = "Kitchen Closed (Ordering Paused)";
+  } else {
+    pausedBanner.style.display = "none";
+    placeBtn.disabled = false;
+    placeBtn.innerHTML = "Proceed to Payment <span>↗</span>";
+  }
+
+  // Location pills and dropdown
+  if (s.locations && s.locations.length) {
+    const locPills = document.getElementById("locationPills");
+    locPills.innerHTML = s.locations.map(loc => `<span class="location-pill">📍 ${loc}</span>`).join("");
+    const locSelect = document.getElementById("location");
+    locSelect.innerHTML = '<option value="">Select your area</option>' + 
+      s.locations.map(loc => `<option value="${loc}">${loc}</option>`).join("");
+  }
+
+  // Timings
+  if (s.timings_text) {
+    const lines = s.timings_text.split("\n").filter(Boolean);
+    document.getElementById("timingsList").innerHTML = lines.map(l => `<li>${l}</li>`).join("");
+  }
+
+  // UPI display
+  document.getElementById("displayUpiId").textContent = s.upi_id || "craverush@upi";
+}
+
+function remaining(dishId) {
+  const d = appState.menu.find(m => m.id === dishId);
+  if (!d || d.sold_out) return 0;
+  const inCart = appState.cart[dishId] || 0;
+  return Math.max(0, d.stock - inCart);
+}
+
+function renderFoodStrip() {
+  const strip = document.getElementById("foodStrip");
+  strip.innerHTML = appState.menu.map(d => {
+    const mediaHtml = d.image ? `<img src="${d.image}" class="chip-img" alt="${d.name}">` : `<span>${d.emoji || "🍽️"}</span>`;
+    return `<div class="food-chip">${mediaHtml}${d.name}</div>`;
+  }).join("");
+}
+
+function renderStock() {
+  const list = document.getElementById("stockList");
+  if (!list) return;
+  list.innerHTML = appState.menu.map(d => {
+    const left = remaining(d.id);
+    const out = left === 0;
+    return `
+      <div class="stock-line">
+        <span>${d.name}</span>
+        <span class="stock-state ${out ? "out" : ""}">${out ? "Sold out" : left + " available"}</span>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderMenu() {
+  const menuContainer = document.getElementById("menu");
+  menuContainer.innerHTML = appState.menu.map(d => {
+    const left = remaining(d.id);
+    const out = left === 0;
+    const mediaHtml = d.image ? `<img src="${d.image}" alt="${d.name}">` : (d.emoji || "🍽️");
+    return `
+      <div class="menu-item ${out ? "sold-out" : ""}">
+        <div class="dish-media">${mediaHtml}</div>
+        <div class="dish-info">
+          <b>${d.name}</b>
+          <small class="price">${rupees(d.price)}</small>
+          ${d.description ? `<span class="dish-desc">${d.description}</span>` : ""}
+          <span class="stock-tag ${out ? "out" : ""}">${out ? "Sold out" : left + " left"}</span>
+        </div>
+        <button class="add" ${out ? "disabled" : ""} onclick="addToCart(${d.id})">
+          ${out ? "Sold out" : "＋ Add"}
+        </button>
+      </div>
+    `;
+  }).join("");
+  renderStock();
+}
+
+function addToCart(dishId) {
+  if (!appState.settings.store_open) {
+    toast("Ordering is currently paused by the kitchen.");
+    return;
+  }
+  const dish = appState.menu.find(d => d.id === dishId);
+  if (!dish || remaining(dishId) <= 0) {
+    toast((dish ? dish.name : "Item") + " is sold out");
+    return;
+  }
+  appState.cart[dishId] = (appState.cart[dishId] || 0) + 1;
+  renderCart();
+  renderMenu();
+  toast(dish.name + " added to cart");
+}
+
+function changeQty(dishId, change) {
+  const dish = appState.menu.find(d => d.id === dishId);
+  if (!dish) return;
+  if (change > 0 && remaining(dishId) <= 0) {
+    toast("No more stock available for " + dish.name);
+    return;
+  }
+  appState.cart[dishId] = (appState.cart[dishId] || 0) + change;
+  if (appState.cart[dishId] <= 0) {
+    delete appState.cart[dishId];
+  }
+  renderCart();
+  renderMenu();
+}
+
+function calculateTotals() {
+  let subtotal = 0;
+  for (const [idStr, qty] of Object.entries(appState.cart)) {
+    const dish = appState.menu.find(d => d.id === Number(idStr));
+    if (dish) subtotal += dish.price * qty;
+  }
+  const threshold = Number(appState.settings.free_delivery_threshold || 149);
+  const standardFee = Number(appState.settings.delivery_fee || 30);
+  const isFree = subtotal >= threshold;
+  const deliveryFee = subtotal > 0 ? (isFree ? 0 : standardFee) : 0;
+  const grandTotal = subtotal + deliveryFee;
+  return { subtotal, deliveryFee, grandTotal, threshold, isFree };
+}
+
+function renderCart() {
+  const cartEl = document.getElementById("cart");
+  const breakdownEl = document.getElementById("billBreakdown");
+  const entries = Object.entries(appState.cart);
+  const { subtotal, deliveryFee, grandTotal, threshold, isFree } = calculateTotals();
+
+  // Update Free Delivery Banner (Item 1 requested)
+  const fdHeadline = document.getElementById("fdHeadline");
+  const fdProgress = document.getElementById("fdProgressText");
+  const fdFill = document.getElementById("fdBarFill");
+  if (fdHeadline && fdProgress && fdFill) {
+    if (subtotal === 0) {
+      fdHeadline.textContent = `Get food up to ${rupees(threshold)} and get FREE DELIVERY! 🚚`;
+      fdProgress.textContent = `Add items worth ${rupees(threshold)} to save delivery fee`;
+      fdFill.style.width = "0%";
+    } else if (!isFree) {
+      const needed = threshold - subtotal;
+      const pct = Math.min(100, Math.round((subtotal / threshold) * 100));
+      fdHeadline.textContent = `Add ${rupees(needed)} more to get FREE DELIVERY! 🛵`;
+      fdProgress.textContent = `You're ${pct}% there! (${rupees(subtotal)} of ${rupees(threshold)})`;
+      fdFill.style.width = pct + "%";
+    } else {
+      fdHeadline.innerHTML = `🎉 FREE DELIVERY UNLOCKED! (You saved ₹${appState.settings.delivery_fee || 30})`;
+      fdProgress.textContent = `Your order qualifies for 100% Free Delivery!`;
+      fdFill.style.width = "100%";
+    }
+  }
+
+  if (!entries.length) {
+    cartEl.innerHTML = '<div class="cart-empty">Your cart is empty. A tragedy, but easily fixed.</div>';
+    breakdownEl.style.display = "none";
+    return;
+  }
+
+  breakdownEl.style.display = "grid";
+  cartEl.innerHTML = entries.map(([idStr, qty]) => {
+    const dish = appState.menu.find(d => d.id === Number(idStr));
+    if (!dish) return "";
+    return `
+      <div class="cart-row">
+        <div>
+          <b>${dish.name}</b>
+          <div class="fine">${rupees(dish.price * qty)} (${rupees(dish.price)} each)</div>
+        </div>
+        <div class="qty">
+          <button onclick="changeQty(${dish.id}, -1)">−</button>
+          <b>${qty}</b>
+          <button onclick="changeQty(${dish.id}, 1)">+</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("subtotalVal").textContent = rupees(subtotal);
+  const feeEl = document.getElementById("deliveryFeeVal");
+  const hintEl = document.getElementById("freeThresholdHint");
+
+  if (isFree) {
+    feeEl.innerHTML = '<span class="free-badge">FREE DELIVERY</span>';
+    hintEl.textContent = `(Eligible for free delivery over ${rupees(threshold)})`;
+  } else {
+    feeEl.textContent = rupees(deliveryFee);
+    const needed = threshold - subtotal;
+    hintEl.textContent = `(Add ${rupees(needed)} more for free delivery!)`;
+  }
+  document.getElementById("grandTotalVal").textContent = rupees(grandTotal);
+}
+
+// Payment Modal Handling
+function openPaymentModal() {
+  if (!appState.settings.store_open) {
+    toast("Kitchen is currently closed. Cannot place order.");
+    return;
+  }
+  const entries = Object.entries(appState.cart);
+  if (!entries.length) {
+    toast("Please add at least one food item to your cart first.");
+    return;
+  }
+  const name = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("room").value.trim();
+  const location = document.getElementById("location").value;
+
+  if (!name) return toast("Please enter your name");
+  if (!/^\d{10}$/.test(phone)) return toast("Please enter a valid 10-digit mobile number");
+  if (!address) return toast("Please enter your complete delivery address / room no.");
+  if (!location) return toast("Please select your delivery area");
+
+  const { subtotal, deliveryFee, grandTotal, isFree } = calculateTotals();
+  const tempId = "CR-" + Math.floor(10000 + Math.random() * 90000);
+  appState.activeOrderId = tempId;
+
+  document.getElementById("modalOrderId").textContent = tempId;
+  document.getElementById("modalPayableAmount").textContent = rupees(grandTotal);
+
+  // Render Detailed Order Breakdown in Payment Modal (Item 2 requested)
+  const itemsContainer = document.getElementById("modalSummaryItems");
+  if (itemsContainer) {
+    itemsContainer.innerHTML = entries.map(([idStr, qty]) => {
+      const dish = appState.menu.find(d => d.id === Number(idStr));
+      if (!dish) return "";
+      return `
+        <div class="ps-item-row">
+          <span>${dish.name} (x${qty})</span>
+          <b>${rupees(dish.price * qty)}</b>
+        </div>
+      `;
+    }).join("");
+  }
+  const sCount = document.getElementById("modalSummaryCount");
+  if (sCount) sCount.textContent = `${entries.length} items`;
+  const mFood = document.getElementById("modalFoodAmount");
+  if (mFood) mFood.textContent = rupees(subtotal);
+  const mDel = document.getElementById("modalDeliveryAmount");
+  if (mDel) mDel.innerHTML = isFree ? '<span class="free-badge">FREE</span>' : rupees(deliveryFee);
+  const mGrand = document.getElementById("modalGrandTotalAmount");
+  if (mGrand) mGrand.textContent = rupees(grandTotal);
+
+  // Set UPI QR Code image
+  const qrImg = document.getElementById("upiQrImage");
+  if (appState.settings.upi_qr_image) {
+    qrImg.src = appState.settings.upi_qr_image;
+  } else {
+    const upiId = appState.settings.upi_id || "craverush@upi";
+    const upiName = encodeURIComponent(appState.settings.upi_name || "CraveRush Food");
+    const upiUri = `upi://pay?pa=${upiId}&pn=${upiName}&am=${grandTotal}&tn=Order-${tempId}&cu=INR`;
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiUri)}`;
+    qrImg.onerror = () => { qrImg.src = "assets/qr-placeholder.svg"; };
+  }
+
+  // UPI deep link for mobile apps
+  const upiId = appState.settings.upi_id || "craverush@upi";
+  const upiName = encodeURIComponent(appState.settings.upi_name || "CraveRush Food");
+  const intentUri = `upi://pay?pa=${upiId}&pn=${upiName}&am=${grandTotal}&tn=Order-${tempId}&cu=INR`;
+  document.getElementById("upiIntentBtn").href = intentUri;
+
+  document.getElementById("paymentModal").classList.add("open");
+}
+
+function closePaymentModal() {
+  document.getElementById("paymentModal").classList.remove("open");
+}
+
+function copyUpiId() {
+  const id = appState.settings.upi_id || "craverush@upi";
+  navigator.clipboard.writeText(id).then(() => {
+    const btn = document.getElementById("copyUpiBtn");
+    btn.textContent = "✓ Copied!";
+    setTimeout(() => { btn.textContent = "📋 Copy"; }, 2000);
+    toast("UPI ID copied to clipboard!");
+  }).catch(() => {
+    toast("UPI ID: " + id);
+  });
+}
+
+function handleProofSelect(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  if (!file.type.startsWith("image/")) {
+    toast("Please select an image file (PNG/JPG)");
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = e => {
+    appState.uploadedProofBase64 = e.target.result;
+    document.getElementById("proofPreviewImg").src = e.target.result;
+    document.getElementById("proofPreviewBox").style.display = "block";
+    document.getElementById("uploadPrompt").style.display = "none";
+    toast("Payment screenshot attached!");
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeProof() {
+  appState.uploadedProofBase64 = "";
+  document.getElementById("proofFileInput").value = "";
+  document.getElementById("proofPreviewBox").style.display = "none";
+  document.getElementById("uploadPrompt").style.display = "block";
+}
+
+async function submitFinalOrder() {
+  if (!appState.uploadedProofBase64) {
+    toast("Please upload your payment screenshot proof before submitting.");
+    return;
+  }
+
+  const submitBtn = document.getElementById("submitOrderBtn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting Order...";
+
+  const name = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("room").value.trim();
+  const location = document.getElementById("location").value;
+  const instructions = document.getElementById("instructions").value.trim();
+
+  const { subtotal, deliveryFee, grandTotal } = calculateTotals();
+
+  // Deduct stock locally
+  for (const [idStr, qty] of Object.entries(appState.cart)) {
+    const d = appState.menu.find(m => m.id === Number(idStr));
+    if (d) {
+      d.stock = Math.max(0, d.stock - qty);
+      if (d.stock === 0) d.sold_out = true;
+    }
+  }
+  localStorage.setItem("craverush_menu", JSON.stringify(appState.menu));
+
+  const items = Object.entries(appState.cart).map(([idStr, qty]) => {
+    const d = appState.menu.find(m => m.id === Number(idStr));
+    return {
+      id: Number(idStr),
+      name: d ? d.name : "Item",
+      price: d ? d.price : 0,
+      qty: qty,
+      total: (d ? d.price : 0) * qty
+    };
+  });
+
+  const orderPayload = {
+    id: appState.activeOrderId,
+    created_at: new Date().toLocaleString("en-IN"),
+    customer_name: name,
+    phone: phone,
+    address: address,
+    location: location,
+    instructions: instructions,
+    items: items,
+    subtotal: subtotal,
+    delivery_fee: deliveryFee,
+    total: grandTotal,
+    payment_screenshot: appState.uploadedProofBase64,
+    payment_status: "Payment Verification Pending",
+    order_status: "Pending Verification"
+  };
+
+  // Save to localStorage orders immediately
+  try {
+    const existingOrders = JSON.parse(localStorage.getItem("craverush_orders") || "[]");
+    existingOrders.push(orderPayload);
+    localStorage.setItem("craverush_orders", JSON.stringify(existingOrders));
+  } catch (_) {}
+
+  // Attempt server order submission if running on http
+  if (window.location.protocol.startsWith("http")) {
+    try {
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload)
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.order) orderPayload.id = data.order.id;
+      }
+    } catch (err) {
+      console.warn("Backend API sync skipped, order stored locally:", err);
+    }
+  }
+
+  // Direct Google Sheets sync if configured
+  if (appState.settings.google_sheets_webhook_url) {
+    try {
+      fetch(appState.settings.google_sheets_webhook_url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload)
+      }).catch(e => console.log("Direct webhook error:", e));
+    } catch (_) {}
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = "Confirm & Submit Order 🚀";
+  onOrderPlacedSuccess(orderPayload);
+}
+
+function onOrderPlacedSuccess(order) {
+  closePaymentModal();
+  
+  // Clear cart and form
+  appState.cart = {};
+  removeProof();
+  renderCart();
+  renderMenu();
+
+  // WhatsApp Alert for Owner
+  const ownerNumber = (appState.settings.owner_whatsapp || "919876543210").replace(/\D/g, "");
+  const itemsText = order.items.map(it => `• ${it.name} x${it.qty} (₹${it.price * it.qty})`).join("\n");
+  const waMessage = 
+`*NEW CRAVERUSH ORDER!* 🛵
+━━━━━━━━━━━━━━━━━━
+*Order ID:* ${order.id}
+*Customer:* ${order.customer_name}
+*Phone:* ${order.phone}
+*Address:* ${order.address} (${order.location})
+${order.instructions ? `*Special Notes:* ${order.instructions}\n` : ""}
+*ITEMS:*
+${itemsText}
+
+*Subtotal:* ₹${order.subtotal}
+*Delivery Fee:* ₹${order.delivery_fee}
+*TOTAL PAYABLE:* ₹${order.total}
+
+*Status:* Payment Verification Pending
+━━━━━━━━━━━━━━━━━━
+_Customer has attached payment screenshot. Please check bank transaction and confirm._`;
+
+  const waUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(waMessage)}`;
+  document.getElementById("whatsappShareBtn").href = waUrl;
+  
+  document.getElementById("successSummary").innerHTML = `
+    Your Order ID is <b style="color:var(--orange)">${order.id}</b>.<br>
+    Payable Total: <b>${rupees(order.total)}</b>.<br>
+    Status: <span style="color:var(--apple-soft)">⏳ Payment Verification Pending</span>
+  `;
+
+  document.getElementById("successModal").classList.add("open");
+  
+  // Set tracking search box
+  document.getElementById("trackQuery").value = order.id;
+  trackOrder();
+}
+
+function closeSuccessModal() {
+  document.getElementById("successModal").classList.remove("open");
+  document.getElementById("track").scrollIntoView({ behavior: "smooth" });
+}
+
+// Live Order Tracking Functionality
+async function trackOrder() {
+  const query = document.getElementById("trackQuery").value.trim();
+  const resDiv = document.getElementById("trackerResult");
+  if (!query) {
+    toast("Please enter your Order ID or Phone number");
+    return;
+  }
+
+  resDiv.style.display = "block";
+  resDiv.innerHTML = '<div style="color:var(--muted);text-align:center;padding:14px">Searching for order...</div>';
+
+  let matchedOrder = null;
+
+  // Try server first if on http
+  if (window.location.protocol.startsWith("http")) {
+    try {
+      const res = await fetch(`/api/orders?id=${encodeURIComponent(query)}&phone=${encodeURIComponent(query)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.orders && data.orders.length) {
+          matchedOrder = data.orders[0];
+        }
+      }
+    } catch (_) {}
+  }
+  
+  // Check local storage fallback
+  if (!matchedOrder) {
+    const stored = JSON.parse(localStorage.getItem("craverush_orders") || "[]");
+    matchedOrder = stored.find(o => 
+      (o.id && o.id.toLowerCase() === query.toLowerCase()) || 
+      (o.phone && o.phone.trim() === query.trim())
+    );
+  }
+
+  if (!matchedOrder) {
+    resDiv.innerHTML = `
+      <div style="border:1px solid #553333;background:#241515;color:#fca5a5;padding:16px;border-radius:14px;text-align:center">
+        <b>Order not found</b>
+        <p style="margin:4px 0 0;font-size:12px;color:#fecaca">Please check your Order ID (e.g. CR-12345) or 10-digit phone number.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const s = matchedOrder.order_status || "Pending Verification";
+  const isPending = s === "Pending Verification";
+  const isConfirmed = s === "Confirmed" || s === "Payment Confirmed";
+  const isPreparing = s === "Preparing" || s === "Preparing Food";
+  const isOut = s === "Out for Delivery";
+  const isDelivered = s === "Delivered";
+  const isRejected = s === "Rejected";
+
+  let statusBadgeColor = "#ff9c42";
+  if (isDelivered || isConfirmed) statusBadgeColor = "#a8df45";
+  if (isRejected) statusBadgeColor = "#ef5350";
+
+  const itemsSummary = (matchedOrder.items || []).map(it => `${it.name} (x${it.qty})`).join(", ");
+
+  resDiv.innerHTML = `
+    <div style="background:#161614;border:1px solid var(--line);border-radius:18px;padding:20px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+        <div>
+          <div class="eyebrow" style="color:var(--orange)">Order Found</div>
+          <h3 style="margin:4px 0">${matchedOrder.id}</h3>
+          <span style="font-size:12px;color:var(--muted)">Placed on: ${matchedOrder.created_at || "Recent"}</span>
+        </div>
+        <div style="text-align:right">
+          <span style="background:#262420;border:1px solid ${statusBadgeColor};color:${statusBadgeColor};padding:6px 12px;border-radius:999px;font-size:12px;font-weight:800;display:inline-block">
+            ${s}
+          </span>
+          <div style="font-size:18px;font-weight:900;color:var(--orange2);margin-top:6px">${rupees(matchedOrder.total)}</div>
+        </div>
+      </div>
+
+      <div style="margin:14px 0;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#ccc">
+        <div><b>Deliver to:</b> ${matchedOrder.customer_name} (${matchedOrder.phone})</div>
+        <div><b>Address:</b> ${matchedOrder.address}, ${matchedOrder.location}</div>
+        <div><b>Items:</b> ${itemsSummary}</div>
+        ${matchedOrder.rejection_reason ? `<div style="color:#ef5350;margin-top:6px"><b>Rejection Reason:</b> ${matchedOrder.rejection_reason}</div>` : ""}
+      </div>
+
+      <!-- Visual Multi-Step Tracker -->
+      <div class="timeline">
+        <div class="timeline-step ${!isRejected ? "done" : ""}">
+          <div class="step-dot">1</div>
+          <div class="step-info">
+            <b>Order Submitted</b>
+            <small>Screenshot received, waiting for kitchen verification</small>
+          </div>
+        </div>
+        <div class="timeline-step ${isConfirmed || isPreparing || isOut || isDelivered ? "done" : (isPending ? "active" : "")}">
+          <div class="step-dot">2</div>
+          <div class="step-info">
+            <b>Payment Verification & Confirmation</b>
+            <small>${isPending ? "Kitchen checking transaction..." : "Payment Verified by Owner"}</small>
+          </div>
+        </div>
+        <div class="timeline-step ${isPreparing || isOut || isDelivered ? "done" : (isConfirmed ? "active" : "")}">
+          <div class="step-dot">3</div>
+          <div class="step-info">
+            <b>Preparing Your Food 👨‍🍳</b>
+            <small>Cooked fresh to your specifications</small>
+          </div>
+        </div>
+        <div class="timeline-step ${isOut || isDelivered ? "done" : (isPreparing ? "active" : "")}">
+          <div class="step-dot">4</div>
+          <div class="step-info">
+            <b>Out for Delivery 🛵</b>
+            <small>Rider heading towards ${matchedOrder.location}</small>
+          </div>
+        </div>
+        <div class="timeline-step ${isDelivered ? "done" : ""}">
+          <div class="step-dot">5</div>
+          <div class="step-info">
+            <b>Delivered 🎉</b>
+            <small>Enjoy your midnight cravings!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Ratings and Feedback
+function rate(n) {
+  document.querySelectorAll("#stars button").forEach((b, i) => b.classList.toggle("active", i < n));
+  window.selectedRating = n;
+}
+
+async function submitRating() {
+  if (!window.selectedRating) return toast("Please select a star rating first");
+  const comment = document.getElementById("feedback").value.trim();
+  if (window.location.protocol.startsWith("http")) {
+    try {
+      await fetch("/api/ratings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ stars: window.selectedRating, feedback: comment })
+      });
+    } catch (_) {}
+  }
+  toast("Thank you for your rating and feedback! ⭐");
+  document.getElementById("feedback").value = "";
+  rate(0);
+}
+
+function toast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2500);
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+initAppData();
+</script>
+</body>
+</html>
