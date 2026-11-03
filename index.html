@@ -534,32 +534,34 @@ async function initAppData() {
   renderMenu();
   renderCart();
   renderFoodStrip();
+  // Load the latest menu from Supabase
+      try {
+        const supabaseClient = window.supabase.createClient(
+          "https://goltmkokcactrnkdzpym.supabase.co/rest/v1/",
+          "sb_publishable_pcXQGY-l9XHFMwWy7S2GZg_584r_Br7"
+        );
 
-  // 2. Fetch live data if running on server
-  if (window.location.protocol.startsWith("http")) {
-    try {
-      const [menuRes, settingsRes] = await Promise.all([
-        fetch("/api/menu").then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch("/api/settings").then(r => r.ok ? r.json() : null).catch(() => null)
-      ]);
-      if (menuRes && menuRes.success && Array.isArray(menuRes.menu) && menuRes.menu.length) {
-        appState.menu = menuRes.menu;
-        localStorage.setItem("craverush_menu", JSON.stringify(menuRes.menu));
+        const { data: storeRow, error } = await supabaseClient
+          .from("craverush_store")
+          .select("data")
+          .eq("id", 1)
+          .single();
+
+        if (error) throw error;
+
+        const remoteMenu = storeRow?.data?.menu;
+
+        if (Array.isArray(remoteMenu)) {
+          appState.menu = remoteMenu;
+          localStorage.setItem("craverush_menu", JSON.stringify(remoteMenu));
+          renderMenu();
+          renderCart();
+          renderFoodStrip();
+        }
+      } catch (error) {
+        console.error("Supabase menu loading failed:", error);
       }
-      if (settingsRes && settingsRes.success && settingsRes.settings) {
-        appState.settings = Object.assign({}, DEFAULT_SETTINGS, settingsRes.settings);
-        localStorage.setItem("craverush_settings", JSON.stringify(appState.settings));
-      }
-      applySettingsToUI();
-      renderMenu();
-      renderCart();
-      renderFoodStrip();
-    } catch (e) {
-      console.log("Server sync offline:", e);
     }
-  }
-}
-
 // Real-time synchronization across browser tabs (e.g. admin changed menu/settings)
 window.addEventListener("storage", (e) => {
   if (e.key === "craverush_menu" && e.newValue) {
